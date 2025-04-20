@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | CyberTech</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="stylessheet.css">
+</head>
+<body>
+    <!-- Header / Nav  -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo_large.png" alt="Cybertech Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="who-are-we.html">Who Are We</a></li>
+                <li><a href="policy-and-procedures.html">Policy & Procedures</a></li>
+                <li><a href="hosting.html">Hosting</a></li>
+                <li><a class="active" href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="contact-us">
+            <h1 class="contact">Contact Us</h1>
+            <p class="pcontact">If you have any questions or need assistance, please feel free to contact us using the form below.</p>
+            <!-- <form action="submit_contact_form.php" method="post"> -->
+            <form method="POST" action="https://formspree.io/f/mjkgrnya">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="success-message" style="display:none;">Thank you for contacting us!</div>
+            <div id="error-message" style="display:none;">Sorry, there was an error submitting your form. Please try again later.</div>
+
+            <script src="script.js"></script>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CyberTech. All rights reserved. | <a href="policy-and-procedures.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

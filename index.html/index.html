@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Michael | Creative Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      color: #333;
+    }
+    body {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+p, a {
+  font-size: 1.1rem;
+}
+
+
+    header {
+      background: linear-gradient(to right, #302b63, #24243e);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .header-with-logo {
+  background: linear-gradient(to right, #302b63, #24243e);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+}
+
+  .logo-left {
+    width: 180px;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .logo-left:hover {
+    transform: scale(1.1);
+  }
+  .header-text {
+    max-width: 600px;
+  }
+
+  @media (max-width: 600px) {
+    .header-with-logo {
+      flex-direction: column;
+    }
+
+    .logo-left {
+      margin-bottom: 1rem;
+    }
+  }
+
+    .logo-img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #1e1e2f;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #fff;
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .clickable-portfolio {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .clickable-portfolio:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+    .portfolio-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portfolio-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .project iframe {
+      width: 100%;
+      height: 400px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+    @media (max-width: 500px) {
+  .clickable-portfolio {
+    height: 200px;
+  }
+}
+
+    /* Fullscreen Lightbox */
+  #lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    animation: zoomIn 0.3s ease;
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+  }
+
+  @media (max-width: 600px) {
+    .header-with-logo {
+      flex-direction: column;
+    }
+
+    .logo-left {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+</style>
+
+</head>
+<!-- Lightbox for Logo -->
+<div id="lightbox-overlay" onclick="closeFullImage()">
+  <img id="lightbox-img" src="" alt="Expanded Logo" />
+</div>
+
+<script>
+  function openFullImage(img) {
+    const overlay = document.getElementById("lightbox-overlay");
+    const lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.src = img.src;
+    overlay.style.display = "flex";
+  }
+
+  function closeFullImage() {
+    document.getElementById("lightbox-overlay").style.display = "none";
+  }
+</script>
+
+<body>
+
+  <header class="header-with-logo" data-aos="fade-down">
+    <img src="images/Profile.png" alt="Logo" class="logo-left interactive-logo" onclick="openFullImage(this)">
+    <div class="header-text">
+      <h1>Michael Maduabuchi</h1>
+      <p>Creative Developer | Graphic Designer | 3D & Web Developer</p>
+    </div>
+  </header>
+  
+  
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#project">HTML Project</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m a final-year IT student majoring in Software Development with a passion for creative design. I specialize in graphic design, 3D modeling, branding, web development, and visual content such as logos, business cards, flyers, and posters.</p>
+  </section>
+
+  <section id="portfolio" data-aos="zoom-in">
+    <h2>Featured Projects</h2>
+    <div class="portfolio-grid">
+
+      <!-- McKen Hotel Brand Kit -->
+      <div class="portfolio-item">
+        <img src="images/McKenLogo.png" alt="McKen Hotel Logo" class="clickable-portfolio" onclick="openFullImage(this)">
+        <p class="caption"><strong>McKen Hotel & Suites – Brand Identity</strong><br>A modern logo and brand kit for a luxury hotel concept.</p>
+      </div>
+    
+      <!-- CyberTech Website -->
+      <div class="portfolio-item">
+        <img src="images/CyberTechlogo.png" alt="CyberTech Logo" class="clickable-portfolio" onclick="openFullImage(this)">
+        <p class="caption"><strong>CyberTech Logo – Tech Website</strong><br>UI/UX design + website demo built in HTML & CSS.</p>
+      </div>
+    
+      <!-- Marketing Project -->
+      <div class="portfolio-item">
+        <img src="images/ydrive-campaign.png" alt="YDrive Campaign" class="clickable-portfolio" onclick="openFullImage(this)">
+        <p class="caption"><strong>Y Drive RideShare – Marketing</strong><br>Flyers and field photos from my role as campus ambassador and Marketer.</p>
+      </div>
+    
+      <!-- Magazine/Editorial Layout (Typography/Print) -->
+      <div class="portfolio-item">
+        <img src="images/flyer.png" alt="McKen Magazine Layout" class="clickable-portfolio" onclick="openFullImage(this)">
+        <p class="caption"><strong>McKen Magazine Spread</strong><br>Typography, layout and editorial design practice.</p>
+      </div>
+    
+      <!-- Motion Graphic Ad Placeholder -->
+      <div class="portfolio-item">
+        <video controls class="clickable-portfolio">
+          <source src="video/McKenHotel &SuitesAds.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="caption"><strong>McKen Hotel Animated Ad</strong><br>Simple After Effects animation used for Instagram promo.</p>
+      </div>
+    
+    </div>
+    
+    
+  </section>
+  
+
+  <section id="project" data-aos="fade-up">
+    <h2>Web Project – CyberTech Website</h2>
+    <div class="project">
+      <iframe src="cybertech/index.html" title="CyberTech Website Demo"></iframe>
+      <p>
+        <a href="cybertech/index.html" target="_blank">🔗 View Full Website</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:maduabuchimichael483@gmail.com">maduabuchimichael483@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/michael-maduabuchi-6bb8a3356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Michael Maduabuchi</a></p>
+    <p>GitHub: <a href="https://github.com/M1chaelW" target="_blank">github.com/M1chaelW</a></p>
+  </section>
+
+  <footer data-aos="fade-in">
+    &copy; 2025 Michael Maduabuchi. All Rights Reserved.
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+</html>

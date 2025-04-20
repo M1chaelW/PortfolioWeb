@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+/* Body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+ 
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+  padding: 1rem;
+}
+ 
+/* Logo container */
+.logo {
+  margin-left: 1rem;
+}
+ 
+.logo-img {
+  max-height: 80px;  
+  width: auto;
+  height: auto;
+}
+ 
+   
+/* Circle Image */
+.circle-img {
+  max-height: 220px;
+  width: auto;
+  height: auto;
+}
+ 
+ 
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-right: 1rem;
+}
+ 
+nav ul li {
+  margin-left: 1rem;
+}
+ 
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+ 
+nav ul li a:hover
+{
+  /*text-decoration: underline;*/
+  color: bisque;
+  font-size:18px;
+  font-size-adjust: 20px;
+}
+ 
+nav ul li a.active {
+  color: gold;
+  font-size:18px;
+  font-size-adjust: 20px;
+}
+ 
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: #fefefe;
+  padding: 2rem 1rem;
+}
+ 
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+ 
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+ 
+ 
+/* Full-Width Panel Section */
+.panel-section {
+  margin-top: 2rem;
+}
+ 
+.panel-img {
+  position: relative; /* Fixes overlay issue */
+  background: url('images/tech-servers.jpg') center/cover no-repeat;
+  min-height: 450px; /* Ensures good scaling on different screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+ 
+/* Ensure text is readable */
+.panel-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1; /* Keeps overlay behind the text */
+}
+ 
+.panel-img > div {
+  position: relative;
+  z-index: 2; /* Ensures text & buttons are above the overlay */
+  color: white;
+}
+ 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .panel-img {
+    min-height: 300px;
+  }
+ 
+  .panel-img h2 {
+    font-size: 2rem;
+  }
+ 
+  .panel-img p {
+    font-size: 1.1rem;
+  }
+}
+ 
+ 
+/* Buttons (for Hero, Plans, etc.) */
+.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+ 
+.btn:hover {
+  color: black;
+  
+}
+ 
+/* Plans Section */
+.plans {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+ 
+.plans-img {
+  max-width: 200px;
+}
+ 
+.plans h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+ 
+/* Container for plan cards */
+.plan-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+ 
+/* Each plan card */
+.plan-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 300px;  /* Adjust as needed for card width */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+ 
+/* Featured card highlight */
+.featured {
+ 
+}
+ 
+/* Plan title */
+.plan-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+ 
+/* Pricing */
+.plan-card .price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+ 
+/* Plan features list */
+.plan-card ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  text-align: left;
+}
+ 
+.plan-card ul li {
+  margin-bottom: 0.5rem;
+}
+ 
+/* Plan button */
+.plan-btn {
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+ 
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 1rem 0;
+}
+ 
+ 
+.performance {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+ 
+.performance h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+ 
+.performance p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+ 
+/* Container for all features */
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+ 
+/* Individual feature box */
+.feature-item {
+  display: flex;          
+  flex-direction: column;  
+  align-items: center;      
+  justify-content: center;  
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px; /* Adjust as needed */
+  padding: 1.5rem;
+  text-align: left; /* So text lines up under icons/titles */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ 
+/* Icons */
+.feature-item i {
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+ 
+.feature-item h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+ 
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .features-list {
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .feature-item {
+    width: 80%; /* or 90%, so they stack nicely */
+    margin-bottom: 1.5rem;
+  }
+}
+ 
+ 
+a {
+  color: white;  
+  font-weight: bold;
+  text-decoration: none;
+}
+ 
+a:hover {
+  color: gold;
+  font-weight: bold;
+  text-decoration: underline;  
+}
+
+.video-section {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+ 
+.video-player {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+ 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+ 
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+ 
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+ 
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+ 
+  .hero h1 {
+    font-size: 2rem;
+  }
+ 
+  .plan-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .plan-card {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+}

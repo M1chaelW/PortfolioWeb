@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="CyberTech - Get Started with Hosting" />
+  <meta name="keywords" content="CyberTech, Start Hosting" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybertech | Hosting </title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="landing.css" />
+  <link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+  
+  <!-- Header / Nav -------->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo_large.png" alt="CyberTech Logo" class="logo-img" />
+      </a>
+    </div>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="who-are-we.html">Who Are We</a></li>
+        <li><a href="policy-and-procedures.html">Policy & Procedures</a></li>
+        <li><a class="active" href="hosting.html">Hosting</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h1>Welcome to CyberTech Hosting</h1>
+      <p>
+        We’re excited to help you launch your new website. Below are some options to get you started. Select one of our hosting plans or learn more about our services.
+      </p>
+      <!-- Plans Section -->
+    <section class="plans">
+      <h2>Choose Your Scalable Web Hosting Plan</h2>
+ 
+      <div class="plan-cards">
+        <!-- Basic Plan -->
+        <article class="plan-card">
+          <h3>Basic Plan</h3>
+          <p class="price">$5 / mo</p>
+          <ul>
+            <li>1 Website</li>
+            <li>10 GB SSD Storage</li>
+            <li>Unmetered Bandwidth</li>
+            <li>Email Support</li>
+          </ul>
+          <a href="hosting.html" class="btn plan-btn">Get Basic</a>
+        </article>
+ 
+        <!-- Advanced Plan (featured) -->
+        <article class="plan-card featured">
+          <h3>Advanced Plan</h3>
+          <p class="price">$15 / mo</p>
+          <ul>
+            <li>Unlimited Websites</li>
+            <li>50 GB SSD Storage</li>
+            <li>Unmetered Bandwidth</li>
+            <li>24/7 Support</li>
+          </ul>
+          <a href="hosting.html" class="btn plan-btn">Get Advanced</a>
+        </article>
+ 
+        <!-- Enterprise Plan -->
+        <article class="plan-card">
+          <h3>Enterprise Plan</h3>
+          <p class="price">$30 / mo</p>
+          <ul>
+            <li>Unlimited Websites</li>
+            <li>Unlimited Storage</li>
+            <li>Priority Bandwidth</li>
+            <li>Premium Support</li>
+          </ul>
+          <a href="hosting.html" class="btn plan-btn">Get Enterprise</a>
+        </article>
+      </div>
+    </section>
+ 
+    </section>
+      <!-- Video Tutorial Section -->
+      <!-- <section id="how-to-video">
+        <h2>How To Join Our Server</h2>
+        <p>Watch this video tutorial to learn how to connect your website to our server easily.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </section> -->
+      <!-- Video Tutorial Section -->
+    <section id="how-to-video">
+      <h2> 🚀 How To Join Our Server</h2>
+      <h3>📂 Steps on how to upload your website.</h3>
+      <ol>
+        <li>Copy your website files</li>
+        <li>Open File Explorer</li>
+        <li>Type <code>ftp://172.17.28.11/</code> in the address bar</li>
+        <li>Enter the username and password given by the team</li>
+        <li>Paste your files into the FTP folder</li>
+        <li>Notify us on Discord to refresh your service</li>
+        <li>After confirmation, access your website using the provided CNAME in any browser.</li>
+      </ol>
+      <br/>
+
+      <p>Watch this video tutorial to learn how to connect your website to our server easily.</p>
+      <div class="video-container">
+          <video id="tutorial-video" controls>
+              <source src="images/Steps To.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
+      <div id="transcript" class="transcript"></div>
+    </section>
+  
+    <!-- Link to the JavaScript file -->
+    <script src="transcription.js"></script>
+        <!-- Testimonials Section 
+        <section id="testimonials">
+          <h2>What Our Clients Say</h2>
+          <div class="jump-options">
+            <div class="testimonial">
+              <p>"CyberTech made it so easy to get my website up and running!"</p>
+              <p>- Jane Doe</p>
+            </div>
+            <div class="testimonial">
+              <p>"Fantastic customer support and reliable hosting services."</p>
+              <p>- John Smith</p>
+            </div>
+          </div>
+        </section>-->
+    
+        <section class="plans">
+          <h2>Our Hosting Features</h2>
+          <div class="plan-cards">
+            <article class="plan-card">
+              <!-- <div class="feature-item"> -->
+                <h3>99.9% Uptime Guarantee</h3>
+                <p>We ensure your website is always available with our reliable uptime guarantee.</p>
+              <!-- </div> -->
+            </article>
+            <article class="plan-card">
+              <!-- <div class="feature-item"> -->
+                <h3>24/7 Customer Support</h3>
+                <p>Our support team is available around the clock to assist you with any issues.</p>
+              <!-- </div> -->
+            </article>
+            <article class="plan-card">
+              <!-- <div class="feature-item"> -->
+                <h3>Easy-to-Use Control Panel</h3>
+                <p>Manage your hosting with our intuitive and user-friendly control panel.</p>
+              <!-- </div> -->
+            </article>
+          </div>
+          
+        </section>
+    
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <h3>How do I choose the right hosting plan?</h3>
+            <p>Consider the size of your website and the expected traffic. Our Basic Plan is great for personal sites, while the Enterprise Plan suits large projects.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I upgrade my hosting plan later?</h3>
+            <p>Yes, you can upgrade your plan at any time as your website grows.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer a money-back guarantee?</h3>
+            <p>Yes, we offer a 30-day money-back guarantee on all our hosting plans.</p>
+          </div>
+        </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 CyberTech. All rights reserved. | <a href="policy-and-procedures.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>

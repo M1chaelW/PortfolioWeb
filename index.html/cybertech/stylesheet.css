@@ -1,0 +1,230 @@
+/* CyberTech Stylesheet */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #f5f5f5;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    /*background: #24245b;*/
+    padding: 1rem;
+  }
+  
+  .logo {
+    margin-left: 1rem;
+  }
+  
+  /* Logo Image */
+  .logo-img {
+    max-height: 80px; 
+    width: auto;
+    height: auto;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 1rem;
+  }
+  
+  nav ul li {
+    margin-left: 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+  }
+  
+  nav ul li a:hover
+  {
+    color: bisque;
+    font-size:18px;
+    font-size-adjust: 20px;
+  }
+
+  nav ul li a.active {
+    color: gold;
+    font-size:18px;
+    font-size-adjust: 20px;
+  }
+  
+
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  section h1, section h2 {
+    color: black;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .feature-item {
+    border: 1px solid #000000;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .faq-item {
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 4px solid#24245b;
+    background-color: #f9f9f9;
+  }
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .testimonial {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 0 10px;
+  }
+  
+  .testimonial span {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    color: #777;
+  }
+  
+  .jump-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .transcript {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-style: italic;
+}
+  /* Contact Us Section (Added) */
+#contact-us {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact-us h1 {
+  font-size: 2.5rem;
+  color: #24245b;
+  margin-bottom: 20px;
+}
+
+#contact-us p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#contact-us form {
+  display: grid;
+  gap: 20px;
+}
+
+#contact-us label {
+  font-weight: bold;
+  text-align: left;
+}
+
+#contact-us input,
+#contact-us textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#contact-us textarea {
+  resize: vertical;
+}
+
+#contact-us button {
+  background-color: #24245b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+#contact-us button:hover {
+  background-color: #000000;
+}
